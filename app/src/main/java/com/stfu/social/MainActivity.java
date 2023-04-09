@@ -48,7 +48,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Instagram = findViewById(R.id.instagram_switch);
+        Snapchat = findViewById(R.id.snapchat_switch);
+        Whatsapp = findViewById(R.id.whatsapp_switch);
+        Reddit = findViewById(R.id.reddit_switch);
+        Telegram = findViewById(R.id.telegram_switch);
+        Discord = findViewById(R.id.discord_switch);
+        Facebook = findViewById(R.id.facebook_switch);
 
+        button = findViewById(R.id.Exit);
 
     }
 }
