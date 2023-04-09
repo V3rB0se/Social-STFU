@@ -16,7 +16,6 @@
         android:layout_centerHorizontal="true"
         android:background="@drawable/rounded"
         android:backgroundTint="@color/material_dynamic_secondary20"
-        android:foreground="@drawable/ripple_effect"
         android:gravity="center_horizontal"
         android:layout_marginBottom="20dp">
         <ImageView
@@ -153,7 +152,6 @@
                 android:layout_height="80dp"
                 android:background="@drawable/middle_radius"
                 app:strokeWidth="0dp"
-                android:foreground="@drawable/ripple_effect"
                 >
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -223,7 +221,6 @@
                 android:layout_height="80dp"
                 android:layout_marginTop="2dp"
                 app:strokeWidth="0dp"
-                android:foreground="@drawable/ripple_effect"
                 >
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -291,7 +288,6 @@
                 android:layout_height="80dp"
                 android:layout_marginTop="2dp"
                 app:strokeWidth="0dp"
-                android:foreground="@drawable/ripple_effect"
                 >
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -360,7 +356,6 @@
                 android:layout_height="80dp"
                 android:layout_marginTop="2dp"
                 app:strokeWidth="0dp"
-                android:foreground="@drawable/ripple_effect"
                 >
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -429,7 +424,6 @@
                 android:layout_height="80dp"
                 android:layout_marginTop="2dp"
                 app:strokeWidth="0dp"
-                android:foreground="@drawable/ripple_effect"
                 >
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -498,7 +492,6 @@
                 android:layout_height="80dp"
                 android:layout_marginTop="2dp"
                 app:strokeWidth="0dp"
-                android:foreground="@drawable/ripple_effect"
                 android:layout_marginBottom="10dp">
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -512,7 +505,7 @@
                         android:layout_height="30dp"
                         android:src="@drawable/icons8_facebook" />
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_weight="1"
                         android:orientation="vertical"
                         android:layout_gravity="bottom"

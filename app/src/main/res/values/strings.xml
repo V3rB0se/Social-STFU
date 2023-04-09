@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Social STFU</string>
+    <string name="facebook">Facebook</string>
+    <string name="exit">Exit</string>
+    <string name="Name">SSTFU</string>
+    <string name="description">Reclaim your peace of mind.</string>
+    <string name="whatsapp">WhatsApp</string>
+    <string name="snapchat">Snapchat</string>
+    <string name="instagram">Instagram</string>
+    <string name="telegram">Telegram</string>
+    <string name="reddit">Reddit</string>
+    <string name="discord">Discord</string>
+    <string name="ImageDesc">SSTFU</string>
+    <string name="desc">Friends can be pesky at times, especially when you\'re trying to focus on something important or just relax and watch a movie. Their constant messages and notifications can be a major distraction, preventing you from fully immersing yourself in the task at hand. That\'s why it\'s important to take control of your device and limit the interruptions caused by social media apps. With this app, you can finally say goodbye to those pesky distractions and reclaim your focus.</string>
 </resources>
