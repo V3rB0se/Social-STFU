@@ -66,45 +66,27 @@ public class MainActivity extends AppCompatActivity {
                 Facebook);
 
 
-        button.setOnClickListener((new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        finish();
-                    }
-                })
+        button.setOnClickListener((view -> finish())
         );
 
-        Reddit.setOnCheckedChangeListener((materialSwitch, isChecked) -> {
-            toggleApp(REDDIT_PACKAGE, R.id.reddit_desc, isChecked, Reddit);
-        });
+        Reddit.setOnCheckedChangeListener((materialSwitch, isChecked) -> toggleApp(REDDIT_PACKAGE, R.id.reddit_desc, isChecked, Reddit));
 
-        Telegram.setOnCheckedChangeListener((materialSwitch, isChecked) -> {
-            toggleApp(TELEGRAM_PACKAGE, R.id.telegram_desc, isChecked, Telegram);
-        });
+        Telegram.setOnCheckedChangeListener((materialSwitch, isChecked) -> toggleApp(TELEGRAM_PACKAGE, R.id.telegram_desc, isChecked, Telegram));
 
-        Instagram.setOnCheckedChangeListener((materialSwitch, isChecked) -> {
-            toggleApp(INSTAGRAM_PACKAGE, R.id.instagram_desc, isChecked, Instagram);
-        });
+        Instagram.setOnCheckedChangeListener((materialSwitch, isChecked) -> toggleApp(INSTAGRAM_PACKAGE, R.id.instagram_desc, isChecked, Instagram));
 
-        Snapchat.setOnCheckedChangeListener((materialSwitch, isChecked) -> {
-            toggleApp(SNAPCHAT_PACKAGE, R.id.snapchat_desc, isChecked, Snapchat);
-        });
+        Snapchat.setOnCheckedChangeListener((materialSwitch, isChecked) -> toggleApp(SNAPCHAT_PACKAGE, R.id.snapchat_desc, isChecked, Snapchat));
 
-        Whatsapp.setOnCheckedChangeListener((materialSwitch, isChecked) -> {
-            toggleApp(WHATSAPP_PACKAGE, R.id.whatsapp_desc, isChecked, Whatsapp);
-        });
+        Whatsapp.setOnCheckedChangeListener((materialSwitch, isChecked) -> toggleApp(WHATSAPP_PACKAGE, R.id.whatsapp_desc, isChecked, Whatsapp));
 
-        Facebook.setOnCheckedChangeListener((materialSwitch, isChecked) -> {
-            toggleApp(FACEBOOK_PACKAGE, R.id.facebook_desc, isChecked, Facebook);
-        });
+        Facebook.setOnCheckedChangeListener((materialSwitch, isChecked) -> toggleApp(FACEBOOK_PACKAGE, R.id.facebook_desc, isChecked, Facebook));
 
-        Discord.setOnCheckedChangeListener((materialSwitch, isChecked) -> {
-            toggleApp(DISCORD_PACKAGE, R.id.discord_desc, isChecked, Discord);
-        });
+        Discord.setOnCheckedChangeListener((materialSwitch, isChecked) -> toggleApp(DISCORD_PACKAGE, R.id.discord_desc, isChecked, Discord));
 
     }
 
 
+    @SuppressLint("SetTextI18n")
     public void toggleApp(String packageName, int id, boolean isChecked, View view) {
         TextView tv = findViewById(id);
 
@@ -193,6 +175,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    @SuppressLint("SetTextI18n")
     public void ChangeStateMessage(int tid, Boolean isAppInstalled, MaterialSwitch switcher){
 
         TextView tv = findViewById(tid);
