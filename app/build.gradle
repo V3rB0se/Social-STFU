@@ -9,7 +9,7 @@ android {
     defaultConfig {
         applicationId "com.stfu.social"
         minSdk 31
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 

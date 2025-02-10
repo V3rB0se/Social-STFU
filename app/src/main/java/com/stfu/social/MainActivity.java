@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
     private static final String FACEBOOK_PACKAGE = "com.facebook.katana";
     private static final String DISCORD_PACKAGE = "com.discord";
 
-    MaterialSwitch Instagram, Snapchat, Whatsapp, Reddit, Telegram, Facebook, Discord;
     Button button;
 
     static {
