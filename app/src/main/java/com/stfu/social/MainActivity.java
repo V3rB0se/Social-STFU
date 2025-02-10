@@ -2,7 +2,6 @@ package com.stfu.social;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.pm.PackageManager;
-import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.HapticFeedbackConstants;
@@ -35,8 +34,6 @@ public class MainActivity extends AppCompatActivity {
     Button button;
 
     static {
-        // Set settings before the main shell can be created
-        Shell.enableVerboseLogging = BuildConfig.DEBUG;
         Shell.setDefaultBuilder(Shell.Builder.create()
                 .setFlags(Shell.FLAG_REDIRECT_STDERR)
                 .setTimeout(10)
@@ -179,12 +176,9 @@ public class MainActivity extends AppCompatActivity {
     public void ChangeStateMessage(int tid, Boolean isAppInstalled, MaterialSwitch switcher){
 
         TextView tv = findViewById(tid);
-        @SuppressLint("ResourceType") ColorStateList colorStateList = getColorStateList(R.drawable.color_dis_en);
 
         if(!isAppInstalled){
             tv.setText("Application Not Found");
-            tv.setBackgroundResource(R.drawable.errorback);
-            tv.setTextColor(colorStateList);
         }
         if(switcher.isChecked()){
             tv.setText("Application is Disabled");

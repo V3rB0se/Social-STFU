@@ -1,5 +1,6 @@
 <resources>
     <color name="seed">#00e1a6</color>
+    <color name="ic_launcher_background">#000000</color>
     <color name="md_theme_light_primary">#006C4E</color>
     <color name="md_theme_light_onPrimary">#FFFFFF</color>
     <color name="md_theme_light_primaryContainer">#48FEC1</color>
