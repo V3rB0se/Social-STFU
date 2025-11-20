@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Icon tint color for dark mode - lighter for good contrast -->
+    <color name="icon_tint">#E1E3DF</color>
+</resources>
+
