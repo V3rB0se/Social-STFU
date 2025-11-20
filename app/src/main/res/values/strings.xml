@@ -4,12 +4,30 @@
     <string name="exit">Exit</string>
     <string name="Name">SSTFU</string>
     <string name="description">Reclaim your peace of mind.</string>
+    <string name="desc">Control your social media apps with root access. Toggle apps on/off to reclaim your peace of mind and productivity.</string>
+    <string name="ImageDesc">App Icon</string>
     <string name="whatsapp">WhatsApp</string>
     <string name="snapchat">Snapchat</string>
     <string name="instagram">Instagram</string>
     <string name="telegram">Telegram</string>
     <string name="reddit">Reddit</string>
     <string name="discord">Discord</string>
-    <string name="ImageDesc">SSTFU</string>
-    <string name="desc">Friends can be pesky at times, especially when you\'re trying to focus on something important or just relax and watch a movie. Their constant messages and notifications can be a major distraction, preventing you from fully immersing yourself in the task at hand. That\'s why it\'s important to take control of your device and limit the interruptions caused by social media apps. With this app, you can finally say goodbye to those pesky distractions and reclaim your focus.</string>
+    <!-- Additional social apps -->
+    <string name="twitter">Twitter / X</string>
+    <string name="tiktok">TikTok</string>
+    <string name="linkedin">LinkedIn</string>
+    <string name="messenger">Messenger</string>
+    <string name="threads">Threads</string>
+    <string name="pinterest">Pinterest</string>
+    <string name="tumblr">Tumblr</string>
+    <string name="bereal">BeReal</string>
+    <string name="mastodon">Mastodon</string>
+    <string name="bluesky">Bluesky</string>
+    <!-- UI strings -->
+    <string name="about">About</string>
+    <string name="social_apps">Social Apps</string>
+    <string name="app_name_placeholder">App Name</string>
+    <string name="enabled">Enabled</string>
+    <string name="disabled">Disabled</string>
+    <string name="not_installed">Not Installed</string>
 </resources>

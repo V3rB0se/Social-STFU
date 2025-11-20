@@ -20,6 +20,7 @@ public class Qtile extends TileService {
 
     }
     private void AppsState(){
+        // Existing social apps
         final String WHATSAPP_PACKAGE = "com.whatsapp";
         final String SNAPCHAT_PACKAGE = "com.snapchat.android";
         final String INSTAGRAM_PACKAGE = "com.instagram.android";
@@ -28,27 +29,33 @@ public class Qtile extends TileService {
         final String FACEBOOK_PACKAGE = "com.facebook.katana";
         final String DISCORD_PACKAGE = "com.discord";
 
-        List<String> appList = Arrays.asList(WHATSAPP_PACKAGE, SNAPCHAT_PACKAGE, INSTAGRAM_PACKAGE, REDDIT_PACKAGE, TELEGRAM_PACKAGE, DISCORD_PACKAGE, FACEBOOK_PACKAGE);
+        // Additional social apps
+        final String TWITTER_PACKAGE = "com.twitter.android";
+        final String TIKTOK_PACKAGE = "com.zhiliaoapp.musically";
+        final String MESSENGER_PACKAGE = "com.facebook.orca";
+        final String THREADS_PACKAGE = "com.instagram.barcelona";
+        final String PINTEREST_PACKAGE = "com.pinterest";
+        final String TUMBLR_PACKAGE = "com.tumblr";
 
-        Tile tile = getQsTile();
+        List<String> appList = Arrays.asList(
+                WHATSAPP_PACKAGE, SNAPCHAT_PACKAGE, INSTAGRAM_PACKAGE,
+                REDDIT_PACKAGE, TELEGRAM_PACKAGE, DISCORD_PACKAGE, FACEBOOK_PACKAGE,
+                TWITTER_PACKAGE, TIKTOK_PACKAGE, MESSENGER_PACKAGE, THREADS_PACKAGE,
+                PINTEREST_PACKAGE, TUMBLR_PACKAGE
+        );
 
+        String command = Invoke ? "pm disable-user --user 0 " : "pm enable ";
 
-        if (Invoke) {
-            for (String packageName : appList) {
-                Shell.cmd("pm disable " + packageName).exec();
+        for (String packageName : appList) {
+            try {
+                Shell.cmd(command + packageName).exec();
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-            Toast.makeText(getApplicationContext(), "Apps disabled", Toast.LENGTH_SHORT).show();
-        } else {
-            for (String packageName : appList) {
-                Shell.cmd("pm enable " + packageName).exec();
-            }
-            Toast.makeText(getApplicationContext(), "Apps enabled", Toast.LENGTH_SHORT).show();
         }
 
-
+        // Show toast notification
+        String message = Invoke ? "Social apps disabled" : "Social apps enabled";
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
-
-
-
-
 }
