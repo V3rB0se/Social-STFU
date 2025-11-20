@@ -6,7 +6,7 @@
 
 ## Material 3 Design
 
-This app uses Google's Material 3 design system with dynamic color theming. On Android 12+, colors automatically adapt to your wallpaper for a personalized experience.
+This app uses Google's Material 3 design system with dynamic color theming.
 
 ## Requirements
 
