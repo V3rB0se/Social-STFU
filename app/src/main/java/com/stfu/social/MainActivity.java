@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements SocialAppAdapter.
         // Setup logo click listener to toggle all apps
         if (logoCard != null) {
             logoCard.setOnClickListener(v -> {
-                // Perform double haptic feedback (like Google Clock)
+                // Perform double haptic feedback (not* like Google Clock)
                 v.performHapticFeedback(
                     android.view.HapticFeedbackConstants.REJECT,
                     android.view.HapticFeedbackConstants.FLAG_IGNORE_GLOBAL_SETTING
