@@ -104,11 +104,19 @@ public class SocialAppAdapter extends RecyclerView.Adapter<SocialAppAdapter.View
 
             appSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
                 if (listener != null && item.isInstalled) {
-                    // Perform haptic feedback
+                    // Perform double haptic feedback (like Google Clock)
                     buttonView.performHapticFeedback(
-                        HapticFeedbackConstants.CONTEXT_CLICK,
+                        HapticFeedbackConstants.CONFIRM,
                         HapticFeedbackConstants.FLAG_IGNORE_GLOBAL_SETTING
                     );
+
+                    // Second haptic pulse after a short delay
+                    buttonView.postDelayed(() -> {
+                        buttonView.performHapticFeedback(
+                            HapticFeedbackConstants.CONFIRM,
+                            HapticFeedbackConstants.FLAG_IGNORE_GLOBAL_SETTING
+                        );
+                    }, 50); // 50ms delay between pulses
 
                     listener.onSwitchChanged(item, isChecked);
                     statusText.setText(isChecked ? R.string.disabled : R.string.enabled);
