@@ -31,10 +31,6 @@ public class MainActivity extends AppCompatActivity implements SocialAppAdapter.
     private static final String MESSENGER_PACKAGE = "com.facebook.orca";
     private static final String THREADS_PACKAGE = "com.instagram.barcelona";
     private static final String PINTEREST_PACKAGE = "com.pinterest";
-    private static final String TUMBLR_PACKAGE = "com.tumblr";
-    private static final String BEREAL_PACKAGE = "team.bere.al";
-    private static final String MASTODON_PACKAGE = "org.joinmastodon.android";
-    private static final String BLUESKY_PACKAGE = "xyz.blueskyweb.app";
 
     private RecyclerView recyclerView;
     private SocialAppAdapter adapter;
@@ -67,7 +63,13 @@ public class MainActivity extends AppCompatActivity implements SocialAppAdapter.
 
         // Setup logo click listener to toggle all apps
         if (logoCard != null) {
-            logoCard.setOnClickListener(v -> toggleAllApps());
+            logoCard.setOnClickListener(v -> {
+                v.performHapticFeedback(
+                    android.view.HapticFeedbackConstants.LONG_PRESS,
+                    android.view.HapticFeedbackConstants.FLAG_IGNORE_GLOBAL_SETTING
+                );
+                toggleAllApps();
+            });
         }
     }
 
@@ -78,6 +80,7 @@ public class MainActivity extends AppCompatActivity implements SocialAppAdapter.
         appItems.add(new SocialAppAdapter.SocialAppItem(DISCORD_PACKAGE, getString(R.string.discord), R.drawable.icons8_discord));
         appItems.add(new SocialAppAdapter.SocialAppItem(FACEBOOK_PACKAGE, getString(R.string.facebook), R.drawable.icons8_facebook));
         appItems.add(new SocialAppAdapter.SocialAppItem(INSTAGRAM_PACKAGE, getString(R.string.instagram), R.drawable.icons8_instagram));
+        appItems.add(new SocialAppAdapter.SocialAppItem(LINKEDIN_PACKAGE, getString(R.string.linkedin), R.drawable.icons8_linkedin));
         appItems.add(new SocialAppAdapter.SocialAppItem(MESSENGER_PACKAGE, getString(R.string.messenger), R.drawable.icons8_messenger));
         appItems.add(new SocialAppAdapter.SocialAppItem(PINTEREST_PACKAGE, getString(R.string.pinterest), R.drawable.icons8_pinterest));
         appItems.add(new SocialAppAdapter.SocialAppItem(REDDIT_PACKAGE, getString(R.string.reddit), R.drawable.icons8_reddit));
@@ -85,7 +88,6 @@ public class MainActivity extends AppCompatActivity implements SocialAppAdapter.
         appItems.add(new SocialAppAdapter.SocialAppItem(TELEGRAM_PACKAGE, getString(R.string.telegram), R.drawable.icons8_telegram_app));
         appItems.add(new SocialAppAdapter.SocialAppItem(THREADS_PACKAGE, getString(R.string.threads), R.drawable.icons8_threads));
         appItems.add(new SocialAppAdapter.SocialAppItem(TIKTOK_PACKAGE, getString(R.string.tiktok), R.drawable.icons8_tiktok));
-        appItems.add(new SocialAppAdapter.SocialAppItem(TUMBLR_PACKAGE, getString(R.string.tumblr), R.drawable.icons8_tumblr));
         appItems.add(new SocialAppAdapter.SocialAppItem(TWITTER_PACKAGE, getString(R.string.twitter), R.drawable.icons8_twitter));
         appItems.add(new SocialAppAdapter.SocialAppItem(WHATSAPP_PACKAGE, getString(R.string.whatsapp), R.drawable.icons8_whatsapp));
 

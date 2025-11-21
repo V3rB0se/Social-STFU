@@ -19,10 +19,6 @@
     <string name="messenger">Messenger</string>
     <string name="threads">Threads</string>
     <string name="pinterest">Pinterest</string>
-    <string name="tumblr">Tumblr</string>
-    <string name="bereal">BeReal</string>
-    <string name="mastodon">Mastodon</string>
-    <string name="bluesky">Bluesky</string>
     <!-- UI strings -->
     <string name="about">About</string>
     <string name="social_apps">Social Apps</string>

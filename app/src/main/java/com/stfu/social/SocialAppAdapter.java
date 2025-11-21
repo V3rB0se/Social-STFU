@@ -1,13 +1,14 @@
 package com.stfu.social;
 
+import android.view.HapticFeedbackConstants;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.card.MaterialCardView;
-import com.google.android.material.imageview.ShapeableImageView;
 import com.google.android.material.materialswitch.MaterialSwitch;
 import java.util.List;
 
@@ -62,7 +63,7 @@ public class SocialAppAdapter extends RecyclerView.Adapter<SocialAppAdapter.View
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private final MaterialCardView card;
-        private final ShapeableImageView icon;
+        private final ImageView icon;
         private final TextView appName;
         private final TextView statusText;
         private final MaterialSwitch appSwitch;
@@ -103,6 +104,12 @@ public class SocialAppAdapter extends RecyclerView.Adapter<SocialAppAdapter.View
 
             appSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
                 if (listener != null && item.isInstalled) {
+                    // Perform haptic feedback
+                    buttonView.performHapticFeedback(
+                        HapticFeedbackConstants.CONTEXT_CLICK,
+                        HapticFeedbackConstants.FLAG_IGNORE_GLOBAL_SETTING
+                    );
+
                     listener.onSwitchChanged(item, isChecked);
                     statusText.setText(isChecked ? R.string.disabled : R.string.enabled);
                     item.isDisabled = isChecked;
